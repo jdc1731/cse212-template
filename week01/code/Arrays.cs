@@ -12,8 +12,19 @@ public static class Arrays
         // Remember: Using comments in your program, write down your process for solving this problem
         // step by step before you write the code. The plan should be clear enough that it could
         // be implemented by another person.
+        // 1)Create an array with the size of length
+        // 2)Use a for loop to iterate through the array
+        // 3)For each index set the value to be multiplied by the number and the index + 1 
+        // 4)Store the multiplied value into the results index
+        // 5)Return the array
 
-        return []; // replace this return statement with your own
+        var results = new double[length];
+        for (int i = 0; i < length; i++)
+        {
+            results[i] = number * (i + 1);
+        }
+
+        return results; 
     }
 
     /// <summary>
@@ -29,5 +40,18 @@ public static class Arrays
         // Remember: Using comments in your program, write down your process for solving this problem
         // step by step before you write the code. The plan should be clear enough that it could
         // be implemented by another person.
+        
+        // To rotate the numbers on the list, you will take the last number and move it to the front of the list. You will do this the amount of times specified.
+        // 1)Use a for loop to iterate through the amount
+        // 2)For each iteration, remove the last number from the list and store it in a variable
+        // 3)Insert the stored variable at the front of the list
+        // 4) Repeat until the for loop is done
+
+        for (int i = 0; i < amount; i++)
+        {
+            int lastNumber = data[data.Count - 1];
+            data.RemoveAt(data.Count - 1);
+            data.Insert(0, lastNumber);
+        }
     }
 }
